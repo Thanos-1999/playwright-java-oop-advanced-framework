@@ -20,12 +20,12 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Node.js (for Playwright browser binaries)
+      - name: Set up Node.js (for Playwright browser binaries)
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install Playwright browsers
+      - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
       - name: Run Playwright Java tests
@@ -33,7 +33,8 @@ jobs:
 
       - name: Upload test results (optional)
         if: always()
-        uses: actions/upload-artifact@a10c7ae53d2b26f87962d0e4e9b6cd15e6c6b84e
+        uses: actions/upload-artifact@v3
         with:
           name: playwright-report
           path: playwright-report/
+
