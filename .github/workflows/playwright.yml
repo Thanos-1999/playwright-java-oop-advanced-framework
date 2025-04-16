@@ -25,15 +25,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Playwright browsers
+      - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
       - name: Run Playwright Java tests
         run: mvn clean test
-
-      - name: Upload test results (optional)
-        if: always()
-        uses: actions/upload-artifact@8d1c65e0532c07cfc905bad1c917a85f70d47b44
-        with:
-          name: playwright-report
-          path: playwright-report/
