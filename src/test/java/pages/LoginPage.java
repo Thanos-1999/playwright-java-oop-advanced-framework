@@ -22,7 +22,7 @@ public class LoginPage {
     }
 
     public void enterPassword(String password) {
-        passwordInput.fill(password);
+//        passwordInput.fill(password);  er
     }
 
     public void clickSignIn() {
