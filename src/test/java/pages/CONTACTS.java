@@ -19,5 +19,7 @@ public class CONTACTS {
 
     public void enterPassword(String password) {
         page.fill("#password", password);
+        page.fill("#password", password);
+
     }
 }
